@@ -19,7 +19,7 @@ public static class AutoCrudExtension
             ConfigId = opt.ConfigId
         };
         SqlSugarScope sqlSugar = new(conf);
-        services.AddSingleton<ISqlSugarClient>(sqlSugar);
+        services.AddKeyedSingleton<ISqlSugarClient>("autocrudsqlsugar", sqlSugar);
         return services;
     }
 }
