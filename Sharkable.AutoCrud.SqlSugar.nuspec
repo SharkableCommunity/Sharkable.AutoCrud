@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Sharkable.AutoCrud.SqlSugar</id>
+    <version>0.0.18</version>
+    <title>Sharkable.AutoCrud.SqlSugar</title>
+    <authors>charleypeng</authors>
+    <readme>docs\README.md</readme>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>sharkable.jpg</icon>
+    <projectUrl>https://github.com/SharkableCommunity/Sharkable.AutoCrud.SqlSugar</projectUrl>
+    <description>a dotnet minimal api framework collection aimed to support aot</description>
+    <releaseNotes>add swagger options</releaseNotes>
+    <copyright>CopyRight 2024 Penglei</copyright>
+    <tags>minialapi aot framework toolkit</tags>
+    <dependencies>
+      <dependency id="Sharkable" version="0.0.18" />
+      <dependency id="SqlSugarCore" version="5.1.4.170-preview05" />
+    </dependencies>
+  </metadata>
+   <files>
+    <file src="README.md" target="docs\" />
+    <file src="sharkable.jpg" target="\" />
+  </files>
+</package>
