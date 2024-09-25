@@ -16,7 +16,11 @@ public static class AutoCrudExtension
             IsAutoCloseConnection = opt.IsAutoCloseConnection,
             DbType = (global::SqlSugar.DbType)opt.DbType,
             ConnectionString = opt.ConnectionString,
-            ConfigId = opt.ConfigId
+            ConfigId = opt.ConfigId,
+            InitKeyType = (global::SqlSugar.InitKeyType)opt.InitKeyType,
+            DbLinkName = opt.DbLinkName,
+            LanguageType = (global::SqlSugar.LanguageType)opt.LanguageType,
+            IndexSuffix = opt.IndexSuffix,
         };
         SqlSugarScope sqlSugar = new(conf);
         services.AddKeyedSingleton<ISqlSugarClient>("autocrudsqlsugar", sqlSugar);
