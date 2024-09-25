@@ -13,7 +13,7 @@
     <description>a dotnet minimal api framework collection aimed to support aot</description>
     <releaseNotes>add swagger options</releaseNotes>
     <copyright>CopyRight 2024 Penglei</copyright>
-    <tags>minialapi aot framework toolkit</tags>
+    <tags>minimalapi aot framework toolkit</tags>
     <dependencies>
       <dependency id="Sharkable" version="0.0.19" />
       <dependency id="SqlSugarCore" version="5.1.4.170-preview05" />
