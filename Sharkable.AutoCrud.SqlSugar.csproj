@@ -9,7 +9,7 @@
 	<FrameworkReference Include="Microsoft.AspNetCore.App" />
 </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Sharkable" Version="0.0.22" />
+    <PackageReference Include="Sharkable" Version="0.0.23" />
     <PackageReference Include="SqlSugarCore" Version="5.1.4.170-preview05" />
   </ItemGroup>
 
