@@ -14,14 +14,20 @@ public static class AutoCrudExtension
     /// <returns></returns>
     public static IServiceCollection AddSqlSugar(this IServiceCollection services, Action<SqlSugarOptions>? setupOption = null)
     {
+        if (setupOption == null)
+            //will not proceed
+            return services;
+
         var option = new SqlSugarOptions();
         //invoke and setup option
         services.Configure<SqlSugarOptions>(opt => 
         {
             setupOption?.Invoke(opt);
         });
-        StaticConfig.EnableAot = true;
-        
+        setupOption?.Invoke(option);
+        //set aot mode
+        StaticConfig.EnableAot = Shark.SharkOption.AotMode;
+
         //get config if already exists
         var provider = services.BuildServiceProvider();
         var beforeCfg = provider.GetService<IOptions<ConnectionConfig>>()?.Value;
@@ -29,7 +35,7 @@ public static class AutoCrudExtension
         //setup config by the given condition
         ConnectionConfig conf;
 
-        if (beforeCfg != null)
+        if (beforeCfg != null && beforeCfg.ConnectionString != null)
         {
             conf = beforeCfg;
         }    
