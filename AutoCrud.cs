@@ -1,6 +1,6 @@
 namespace Sharkable;
 
-public class AutoCrudSqlSugar
+public partial class AutoCrudSqlSugar
 {
 
 }

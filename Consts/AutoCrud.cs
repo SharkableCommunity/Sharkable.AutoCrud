@@ -1,7 +1,7 @@
 ﻿
 namespace Sharkable;
 
-public partial class AutoCrud
+public partial class AutoCrudSqlSugar
 {
     /// <summary>
     /// service name using keyed singleton
